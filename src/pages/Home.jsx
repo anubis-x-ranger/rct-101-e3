@@ -13,7 +13,7 @@ const Home = () => {
     });
   }
 
-  return <div>Home Page
+  return <div>
     <Products products={products}/>
   </div>;
 };
