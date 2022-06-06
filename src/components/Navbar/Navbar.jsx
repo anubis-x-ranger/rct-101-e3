@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <div data-cy="navbar" className={styles.nav}>
       <Link data-cy="navbar-home-link" to="/">Logo</Link>
-      <span data-cy="navbar-cart-items-count">CART :{` ( ${cart} )`}</span>
+      <span data-cy="navbar-cart-items-count">CART :{` ( ${cart.length} )`}</span>
       <button data-cy="navbar-login-logout-button" onClick={handleLogout()}>Logout</button>
     </div>
   );
