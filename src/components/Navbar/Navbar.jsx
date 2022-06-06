@@ -1,14 +1,17 @@
 import React from "react";
-
+import { CartContext } from "../../context/CartContext";
+import { Link } from "react-router-dom";
+import { useContext } from "react";
 // use react-router Link or NavLink
-const Link = <a />;
+
 
 const Navbar = () => {
+  const {cart}=useContext(CartContext)
   return (
     <div data-cy="navbar">
-      <Link data-cy="navbar-home-link"></Link>
-      <span data-cy="navbar-cart-items-count">{/* count here */}</span>
-      <button data-cy="navbar-login-logout-button"></button>
+      <Link data-cy="navbar-home-link">Logo</Link>
+      <span data-cy="navbar-cart-items-count">CART :{` ( ${cart} )`}</span>
+      <button data-cy="navbar-login-logout-button">Logout</button>
     </div>
   );
 };
