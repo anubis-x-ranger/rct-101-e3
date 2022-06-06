@@ -6,12 +6,15 @@ import { useContext } from "react";
 
 
 const Navbar = () => {
-  const {cart}=useContext(CartContext)
+  const {cart}=useContext(CartContext);
+  const handleLogout=()=>{
+    // console.log("logout")
+  }
   return (
     <div data-cy="navbar">
       <Link data-cy="navbar-home-link" to="/">Logo</Link>
       <span data-cy="navbar-cart-items-count">CART :{` ( ${cart} )`}</span>
-      <button data-cy="navbar-login-logout-button">Logout</button>
+      <button data-cy="navbar-login-logout-button" onClick={handleLogout()}>Logout</button>
     </div>
   );
 };
